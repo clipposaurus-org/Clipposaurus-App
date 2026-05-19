@@ -6,8 +6,7 @@ const envSchema = z.object({
 
   // Upstash Redis Configuration
   UPSTASH_REDIS_KV_REST_API_URL: z.url(),
-  UPSTASH_REDIS_KV_REST_API_TOKEN: z.string().min(1),
-
+  UPSTASH_REDIS_REST_TOKEN: z.string().min(1),
 
   // Encryption Configuration
   DROP: z.string().min(1),

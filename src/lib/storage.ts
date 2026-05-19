@@ -2,9 +2,9 @@ import env from "@/lib/env";
 
 export async function checkRedisStorageQuota(): Promise<number> {
   try {
-    const response = await fetch(`${env.UPSTASH_REDIS_KV_REST_API_URL}/info`, {
+    const response = await fetch(`${env.UPSTASH_REDIS_REST_TOKEN}/info`, {
       headers: {
-        Authorization: `Bearer ${env.UPSTASH_REDIS_KV_REST_API_TOKEN}`,
+        Authorization: `Bearer ${env.UPSTASH_REDIS_REST_TOKEN}`,
       },
       cache: "no-store",
     });
